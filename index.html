@@ -1,0 +1,71 @@
+<html>
+
+<head>
+    <title>My Application</title>
+    <link href="styles.css" rel="stylesheet" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body ng-app="app" ng-cloak>
+    <div class="myApplication">My Application</div>
+    <div class="samplePage">Sample Page</div>
+    <div class="stats">
+        <div class="revenue" ng-controller="revenueCtrl">
+            <div class="statTitle">Revenue by acquistion source</div>
+            <div class="revenueTable">
+                <div class="tblHeader">
+                    <span class="tdSource">Source</span>
+                    <span class="tdRevenue">Revenue</span>
+                </div>
+                <div class="tblDataRow" ng-repeat="data in revenueData">
+                    <span class="tdSource">{{data.name}}</span>
+                    <span class="tdRevenue">{{"$" + data.revenue}}</span>
+                </div>
+
+            </div>
+        </div>
+        <div class="chart">
+            <div class="statTitle">Device distribution</div>
+            <distribution-chart></distribution-chart>
+        </div>
+    </div>
+    <div class="topProducts" ng-controller="productsCtrl">
+        <div class="productTitle">Top Product</div>
+        <div class="productsList fontLight">
+            <div class="productWidget" ng-repeat="product in products">
+                <div class="productWrapper">
+                    <img ng-src="{{product.imgSrc}}" alt="product image" class="productImg"/>
+                    <span class="productNum">{{$index+1}}</span>
+                    <div class="productName">{{product.productName}}</div>
+                    <span class="recentViews"><span class="greenText">{{"+" + product.recentStat.views}}</span> Views</span>
+                    <span class="recentDays">{{product.recentStat.days + " days ago"}}</span> 
+                </div>
+                <div class="borderLine"></div>
+                <div class="productDetails">
+                    <div class="productDetailsRow clearFix">
+                        <span class="viewsText">Views</span>
+                        <span class="viewsCount">{{product.views}}</span>
+                    </div>
+                    <div class="productDetailsRow clearFix">
+                        <span class="purchasesText">Purchases</span>
+                        <span class="purchasesCount">{{product.purchases}}</span>
+                    </div>
+                    <div class="productDetailsRow clearFix">
+                        <span class="conversionRateText">Conversion Rate</span>
+                        <span class="conversionRateValue">{{product.conversionRate + "%"}}</span>
+                    </div>
+                    <div class="productDetailsRow clearFix">
+                        <span class="revenueText">Revenue</span>
+                        <span class="revenueValue">{{"$" + product.revenue}}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.6/Chart.min.js"></script>
+
+    <script src="app.js "></script>
+</body>
+
+</html>

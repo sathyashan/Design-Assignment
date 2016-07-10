@@ -1,0 +1,213 @@
+body{
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-weight: 300;
+    font-size: 12px;
+    color: #424242;
+    margin: 0;
+    max-width: 1200px;
+    padding: 0 10%;
+}
+[ng\:cloak], [ng-cloak], .ng-cloak {
+  display: none !important;
+}
+.fontLight{
+    color: #757575;
+}
+.myApplication{
+    background: #F44336;
+    color: #FFF;
+}
+.myApplication, .samplePage{
+    text-transform: uppercase;
+    padding: 10px 20px;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+.samplePage{
+    background: #E0E0E0;
+}
+.stats{
+    display: inline-flex;
+    text-transform: uppercase;
+    padding: 30px 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+.statTitle, .productTitle{
+    margin-bottom: 10px;
+}
+.revenue, .chart{
+    display: inline-block;
+}
+.revenue{
+    width: 35%;
+}
+.chart{
+    margin-left: 20%;
+    width: 65%;
+}
+.chartSection{
+    width: 200px;
+    height: 200px;
+}
+.tdSource{
+    width: 70%;
+    display: inline-block;
+}
+.tdRevenue{
+    width: calc(30% - 5px);
+    display: inline-block;
+}
+.tblHeader{
+    background: #BDBDBD;
+    font-weight: 600;
+    margin: 10px 0 2px;
+    padding: 5px 10px;
+}
+.tblDataRow{
+    margin: 2px 0;
+    background: #E0E0E0;
+    padding: 10px;
+}
+.topProducts{
+    margin: 20px;
+}
+.productName{
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+.productsList{
+    width: 100%;
+}
+.productWidget{
+    display: inline-block;
+    width: calc((100% - 76px)/4);
+    border: solid 2px #E0E0E0;
+    margin: 0 10px;
+}
+.productWidget:first-child{
+    margin-left: 0;
+}
+.productWidget:last-child{
+    margin-right: 0;
+}
+
+.productWrapper{
+    padding: 10px;
+    position: relative;   
+}
+.productImg{
+    width: 100%;
+}
+.productNum{
+    top: 10px;
+    left: 10px;
+    position: absolute;
+    padding: 10px;
+    font-size: 16px;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    vertical-align: middle;
+    background: #E0E0E0;
+}
+[class$=Title]{
+    text-transform: uppercase;
+}
+.recentViews{
+    margin-right: 10px;
+}
+.clearFix::after{
+    clear: both;
+    content: "";
+    display: table;
+    height: 0;
+    visibility: hidden;
+}
+.borderLine{
+    border-bottom: solid 1px #E0E0E0;
+}
+.productDetails{
+    padding: 10px 10px;
+    background: #EEEEEE;
+
+}
+.viewsText, .viewsCount{
+    display: inline-block;
+}
+
+.viewsCount, .purchasesCount, .conversionRateValue, .revenueValue{
+    float: right;
+    font-weight: 600;
+}
+.productDetailsRow{
+    margin: 5px 0;
+}
+.greenText{
+    color: #81C784;
+}
+.expandCollapse{
+    border-top: solid 1px #E0E0E0;
+    padding: 0 10px;
+    text-align: center;
+    vertical-align: middle;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    background: #EEEEEE;
+    cursor: pointer;
+}
+
+
+@media screen and (max-width: 1084px){
+    body{
+        padding: 0;
+    } 
+}
+@media screen and (max-width: 810px){
+    .revenue{
+        width: 50%;
+    }
+    .chart{
+        margin-left: 100px;
+        width: 50%;
+    }
+}
+@media screen and (max-width: 740px){
+    .productWidget{
+        width: calc((100% - 28px)/2);
+        margin-bottom: 10px;
+    }
+    .productWidget:nth-child(2n){
+        margin-right: 0;
+    }
+    .productWidget:nth-child(2n+1){
+        margin-left: 0;
+    }
+}
+@media screen and (max-width: 580px) {
+    .revenue, .chart{
+        display: block;
+    }
+    .revenue{
+        width: 70%;
+        margin-bottom: 10px;
+    }
+    .chartSection{
+        margin-left: 50px;
+    }
+    .stats{
+        display: block;
+    }
+    .chart{
+        margin: 0;
+    }
+}
+@media screen and (max-width: 360px) {
+    .productWidget{
+        width: calc((100% - 4px));
+        margin: 0 0 10px;
+    }
+    .revenue{
+        width: 100%;
+    }
+}
